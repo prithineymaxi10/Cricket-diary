@@ -1,0 +1,93 @@
+:root {
+    --primary-dark: #0f3a2a;
+    --primary: #1B6B4F;
+    --primary-light: #2d8659;
+    --accent: #D4A574;
+    --accent-dark: #b8935a;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555;
+    --text-muted: #888;
+    --bg-light: #f9f8f6;
+    --bg-white: #ffffff;
+    --border-color: #e0ddd8;
+    --shadow-sm: 0 2px 8px rgba(31, 58, 45, 0.08);
+    --shadow-md: 0 6px 20px rgba(31, 58, 45, 0.12);
+    --shadow-lg: 0 12px 40px rgba(31, 58, 45, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: #fdfbf7;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Utility Classes */
+.loading {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Section switching (Coverage / Game) */
+.diary-section {
+    display: none;
+}
+
+.diary-section.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    :root {
+        --shadow-sm: 0 1px 4px rgba(31, 58, 45, 0.06);
+        --shadow-md: 0 3px 12px rgba(31, 58, 45, 0.1);
+        --shadow-lg: 0 6px 24px rgba(31, 58, 45, 0.12);
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .section-nav-newspaper,
+    .game-wrapper {
+        display: none !important;
+    }
+}

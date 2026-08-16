@@ -1,0 +1,130 @@
+/* ===== CRICKET DOODLE GAME ===== */
+
+.game-instructions {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    max-width: 640px;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.game-hud {
+    display: flex;
+    gap: 1.8rem;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    padding: 1rem 1.8rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.game-stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.game-stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.game-commentary {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    min-height: 1.4em;
+    max-width: 500px;
+}
+
+#game-canvas {
+    background: #f9f8f6;
+    border: 3px solid var(--primary-dark);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    max-width: 100%;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.game-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.game-btn {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.game-btn:not(.game-btn-hit) {
+    background: var(--primary);
+    color: white;
+}
+
+.game-btn:not(.game-btn-hit):hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.game-btn-hit {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+}
+
+.game-btn-hit:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(212, 165, 116, 0.35);
+}
+
+.game-btn-hit:active {
+    transform: translateY(0) scale(0.97);
+}
+
+@media (max-width: 768px) {
+    .game-hud {
+        gap: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .game-stat-value {
+        font-size: 1rem;
+    }
+
+    .game-stat-label {
+        font-size: 0.6rem;
+    }
+
+    .game-controls {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cricket-diary-frontend",
+  "version": "1.0.0",
+  "description": "Cricket Diary - Real-time Cricket News Dashboard",
+  "author": "Cricket Diary",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "dev": "python -m http.server 3000"
+  },
+  "keywords": [
+    "cricket",
+    "news",
+    "dashboard",
+    "t20i",
+    "odi"
+  ]
+}
